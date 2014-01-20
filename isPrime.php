@@ -9,6 +9,12 @@
  */
 function isPrime($number){
 	
+	// Takes care of 2
+	if ($number === 2){
+		return true;
+	}
+	
+	// Removes all evens
 	if ($number % 2 === 0){
 		return false;
 	}
