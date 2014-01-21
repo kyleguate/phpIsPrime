@@ -22,7 +22,7 @@ function isPrime($number){
 	$i = 3;
 	$currentQuotient = round($number/$i);
 	
-	for ($i = 3; $i <= $currentQuotient; $i+=2){
+	for ($i; $i <= $currentQuotient; $i+=2){
 		
 		if ($number % $i === 0){ 
 			return false; 
