@@ -19,15 +19,11 @@ function isPrime($number){
 		return false;
 	}
 	
-	$i = 3;
-	$currentQuotient = round($number/$i);
-	
-	for ($i; $i <= $currentQuotient; $i+=2){
-		
+	// Alternative to using sqrt
+	for ($i = 3; $i <= round($number/$i); $i+=2){
 		if ($number % $i === 0){ 
 			return false; 
 		}
-		$currentQuotient = round($number/$i);
 	}
 	return true;
 }
