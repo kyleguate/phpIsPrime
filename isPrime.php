@@ -19,6 +19,7 @@ function isPrime($number){
 		return false;
 	}
 	
+	
 	// Alternative to using sqrt
 	for ($i = 3; $i <= round($number/$i); $i+=2){
 		if ($number % $i === 0){ 
@@ -26,9 +27,14 @@ function isPrime($number){
 		}
 	}
 	return true;
+	
+	// sqrt
+	/*
+	$sqrt = sqrt($number);
+	for ($i = 3; $i <= $sqrt; $i+=2){
+		if ($number % $i === 0){ 
+			return false; 
+		}
+	}
+	*/
 }
-
-/* Testing */
-//for ($i = 1; $i <= 100; $i++){
-//	echo $i . ': ' . isPrime($i) . '<br />';
-//} 
